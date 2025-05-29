@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbarSupportedContent" data-bs-offset="100" tabindex="0">
+  </div>
+  <!-- Navbar -->
+ 
+  <header id="header" >
+     <nav class="navbar navbar-expand-lg position-fixed fixed-top  py-4">
+    <div class=" container navbar-container">
+      <a class="navbar-brand fw-bold" href="index.html" title="العودة للصفحة الرئيسية">
+        <img src="images/logo.png" alt="logo image">
+      </a>
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 d-flex justify-content-center align-items-center gap-3">
+          <li class="nav-item"><a class="nav-link active" data-ar="الرئيسية" data-en="Home" href="#header">الرئيسية</a></li>
+          <li class="nav-item"><a class="nav-link" data-ar="من نحن" data-en="About" href="#about">من نحن</a></li>
+          <li class="nav-item"><a class="nav-link" data-ar="خدماتنا" data-en="Services" href="#services">خدماتنا</a></li>
+          <li class="nav-item"><a class="nav-link" data-ar="المدونة" data-en="Blog" href="blog.html" target="_blank">المدونة</a></li>
+          <li class="nav-item"><a class="nav-link" data-ar="اتصل بنا" data-en="Contact" href="contact.html" target="_blank">اتصل بنا</a></li>
+        </ul>
+        <div class="lang-switch-wrapper">
+          <button class="primary-btn lang-btn ms-lg-3 lang" id="langSwitch" data-lang="ar">EN</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+    <div class="container d-flex flex-column justify-content-center align-items-center gap-4 text-center" id="home" data-aos="fade-in" data-aos-delay="100">    
+      <!-- Icon with custom color -->
+      <div class="elementor-icon elementor-icon-1" style="width: 80px; height: 80px; fill: #ccff8b;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <g id="guide"></g>
+          <g id="GLYPH">
+            <path d="m256 16c-10.7 220.5-19.5 229.3-240 240 220.5 10.7 229.3 19.5 240 240 10.7-220.5 19.5-229.3 240-240-220.5-10.7-229.3-19.5-240-240z"></path>
+          </g>
+          <g id="Number"></g>
+        </svg>
+      </div>
+      <div class="elementor-icon elementor-icon-2" style="width: 80px; height: 80px; fill: #ccff8b;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <g id="guide"></g>
+          <g id="GLYPH">
+            <path d="m256 16c-10.7 220.5-19.5 229.3-240 240 220.5 10.7 229.3 19.5 240 240 10.7-220.5 19.5-229.3 240-240-220.5-10.7-229.3-19.5-240-240z"></path>
+          </g>
+          <g id="Number"></g>
+        </svg>
+      </div>
+
+      <!-- Heading & Content -->
+    <div class="row g-4 content p-4">
+      <div class="col-lg-6">
+          <div class=" d-flex flex-column justify-content-center align-items-center mt-lg-5">
+              <h1 data-ar="حلول محاسبية احترافية" data-en="Professional Accounting Solutions">حلول محاسبية احترافية</h1>
+              <p data-en="We provide comprehensive accounting services to companies and individuals, adhering to the highest standards of quality and professionalism." data-ar="نقدم خدمات محاسبية متكاملة للشركات والأفراد مع الالتزام بأعلى معايير الجودة والاحترافية">
+                  نقدم خدمات محاسبية متكاملة للشركات والأفراد مع الالتزام بأعلى معايير الجودة والاحترافية
+              </p>
+              <!-- Buttons -->
+              <div class="d-flex gap-3 flex-wrap justify-content-center">
+              <a href="#services" class="primary-btn" data-en="Services" data-ar="خدماتنا">خدماتنا</a>
+              <a href="contact.html" target="_blank" class="secondary-btn" data-en="contact" data-ar="تواصل معنا">تواصل معنا</a>
+              </div>
+          </div>
+      </div>
+      <div class="col-lg-6">
+          <div class="images d-flex justify-content-center align-items-center"> <div class="elementor-icon image-svg-1" style="width: 80px; height: 80px; fill: #ccff8b;">
+      </div>
+              <img src="images/header.jpg" alt="header image">
+          </div>
+      </div>
+  
+    </div>
+    </div>
+  </header>
+  <main>
+      <section id="about" class="about section-padding" data-aos="zoom-in" data-aos-delay="100">
+          <div class="container">
+              <div class="row g-4 justify-content-center align-items-center">
+                  <div class="col-lg-6">
+                      <div class="inner">
+                          <h2 data-en="About Us" data-ar="من نحن" class="text-center custom-heading about-heading">من نحن</h2>
+                          <p data-en="The Certified Public Accountant Office specializes in providing accounting, tax, and financial consulting services to companies, institutions, and individuals. The office was founded in 2018 by a group of experienced, certified public accountants." data-ar="مكتب المحاسب القانوني هو مكتب متخصص في تقديم الخدمات المحاسبية والضريبية والاستشارات المالية للشركات والمؤسسات والأفراد. تأسس المكتب عام 2018 على يد نخبة من المحاسبين القانونيين المعتمدين وذوي الخبرة." class="lh-lg mt-5 mb-5">مكتب المحاسب القانوني هو مكتب متخصص في تقديم الخدمات المحاسبية والضريبية والاستشارات المالية للشركات والمؤسسات والأفراد. تأسس المكتب عام 2018 على يد نخبة من المحاسبين القانونيين المعتمدين وذوي الخبرة.</p>
+                          <p data-ar="نسعى دائماً لتقديم خدمات عالية الجودة وفقاً للمعايير الدولية للمحاسبة والمراجعة، مع الالتزام بالسرية التامة وأخلاقيات المهنة." data-en="We always strive to provide high-quality services in accordance with international accounting and auditing standards, while adhering to strict confidentiality and professional ethics." class="lh-lg mb-5">نسعى دائماً لتقديم خدمات عالية الجودة وفقاً للمعايير الدولية للمحاسبة والمراجعة، مع الالتزام بالسرية التامة وأخلاقيات المهنة.</p>
+                      </div>
+                  </div>
+                  <div class="col-lg-6">
+                      <div class="inner">
+                          <img src="images/About.webp" class="w-100" alt="about page">
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+        <section class="stats py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-6 col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-file-alt"></i>
+            </div>
+            <h3><span class="counter" data-count="1000">0</span>+</h3>
+            <p data-ar="مشروع مكتمل" data-en="Completed Projects">مشروع مكتمل</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-check-square"></i>
+            </div>
+            <h3><span class="counter" data-count="500">0</span>+</h3>
+            <p data-ar="عميل سعيد" data-en="Happy Clients">عميل سعيد</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3><span class="counter" data-count="8">0</span>+</h3>
+            <p data-ar="سنوات الخبره" data-en="Years of Experience">سنوات الخبره</p>
+          </div>
+        </div>
+      </div>
+    </div>
+        </section>
+      <section id="services" class="services section-padding content" >
+          <div class="container ">
+              <h2 data-ar="خدماتنا" data-en="Our Services" class="text-center mb-5">خدماتنا</h2>
+              <div class="row g-4">
+
+                  <!-- 1. خدمات مسك الدفاتر -->
+                  <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="book service1 h-100">
+                       <p data-ar="يلتزم مكتب اوديت تريب بتقديم خدمات إعداد القوائم المالية وفقًا لأعلى معايير المحاسبة الدولية والمعايير المحلية المعتمدة. نحن ندرك أن القوائم المالية الدقيقة هي الأساس لاتخاذ قرارات مالية سليمة، ولهذا نعمل على إعدادها بدقة واحترافية بما يعكس الصورة الحقيقية للوضع المالي للشركة. تشمل خدماتنا إعداد الميزانية العمومية، قائمة الدخل، قائمة التدفقات النقدية، والإيضاحات المرفقة. كما نضمن التزام القوائم بالمعايير المحاسبية ومراعاة الجوانب القانونية والضريبية ذات الصلة. بفضل خبراتنا المتراكمة، نوفر حلولاً مرنة تناسب طبيعة كل نشاط تجاري. ويستفيد عملاؤنا من شفافية التقارير ووضوحها مما يسهل التعامل مع الجهات الحكومية والممولين والمستثمرين." data-en="Audit Trip is committed to delivering financial statement preparation services in accordance with the highest international and local accounting standards. We understand that accurate financial statements are essential for sound financial decision-making. Therefore, we prepare them with
+                         precision and professionalism to reflect the true financial position of the company. Our services include the preparation of the balance sheet, income statement, cash flow statement, and accompanying notes. We ensure compliance with accounting standards while considering legal and
+                         tax aspects. With our extensive experience, we provide flexible solutions tailored to each business’s nature. Our clients benefit from transparent and clear reports, facilitating interactions with government bodies, funders, and investors." class="lh-lg">يلتزم مكتب اوديت تريب بتقديم خدمات إعداد القوائم المالية وفقًا لأعلى معايير المحاسبة الدولية والمعايير المحلية المعتمدة. نحن ندرك أن القوائم المالية الدقيقة هي الأساس لاتخاذ قرارات مالية سليمة، ولهذا نعمل على إعدادها بدقة واحترافية بما يعكس الصورة الحقيقية للوضع المالي للشركة. تشمل خدماتنا إعداد الميزانية العمومية،  قائمة الدخل،  قائمة التدفقات النقدية، والإيضاحات المرفقة. كما نضمن التزام القوائم بالمعايير المحاسبية ومراعاة الجوانب القانونية والضريبية ذات الصلة. بفضل خبراتنا المتراكمة، نوفر حلولاً مرنة تناسب طبيعة كل نشاط تجاري. ويستفيد عملاؤنا من شفافية التقارير ووضوحها مما يسهل التعامل مع الجهات الحكومية والممولين والمستثمرين.</p>
+                      <div class="cover">
+                        <h3 data-en="Preparation of Financial Statements" data-ar="إعداد القوائم المالية" class="text-white">إعداد القوائم المالية</h3>
+                      </div>
+                    </div>
+                  </div>
+
+
+
+                  <!-- 2. الالتزام بضريبة المرتبات -->
+                    <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                      <div class="book service2 h-100">
+                        <p data-ar="يقوم مكتب اوديت ً تريب خدمات المراجعة والتدقيق الخارجي وفقا للمعايير الدولية للتدقيق (ISA)، بهدف ضمان مصداقية وموثوقية المعلومات المالية للعملاء. يعمل فريقنا المتخصص على تنفيذ إجراءات فحص دقيقة لتحليل وتقييم العمليات المالية والرقابية. نحن لا نكتفي بالتحقق من الأرقام فحسب، بل نُقدم توصيات استراتيجية لتحسين كفاءة النظم المحاسبية وتقليل المخاطر. تشمل خدماتنا تدقيق الحسابات السنوية، وتقارير المراجعة الخاصة، ومراجعات الشركات القابضة والفروع. كما نوفر تقارير شاملة تسهم في تعزيز ثقة الشركاء والمستثمرين. تعتمد خدماتنا على مبدأ الاستقلالية والسرية التامة لحماية مصالح عملائنا وضمان الحيادية والموضوعية." data-en="Audit Trip offers external audit and assurance services in accordance with the International Standards on Auditing (ISA) to ensure the credibility and reliability of clients’ financial information. Our specialized team conducts thorough procedures to analyze and evaluate financial and control processes. We go beyond checking figures by providing strategic recommendations to enhance
+                            accounting system efficiency and reduce risks. Our services include annual audits, special audit reports, and audits of holding companies and subsidiaries. We deliver comprehensive reports that
+                            boost the confidence of stakeholders and investors. Our services are based on independence and full confidentiality to protect client interests and ensure objectivity." class="lh-lg">يقوم مكتب اوديت ً تريب خدمات المراجعة والتدقيق الخارجي وفقا للمعايير الدولية للتدقيق
+                             (ISA)، بهدف ضمان مصداقية وموثوقية المعلومات المالية للعملاء. يعمل فريقنا المتخصص
+                             على تنفيذ إجراءات فحص دقيقة لتحليل وتقييم العمليات المالية والرقابية. نحن لا نكتفي
+                             بالتحقق من الأرقام فحسب، بل نُقدم توصيات استراتيجية لتحسين كفاءة النظم المحاسبية
+                             وتقليل المخاطر. تشمل خدماتنا تدقيق الحسابات السنوية، وتقارير المراجعة الخاصة، ومراجعات
+                             الشركات القابضة والفروع. كما نوفر تقارير شاملة تسهم في تعزيز ثقة الشركاء والمستثمرين.
+                             تعتمد خدماتنا على مبدأ الاستقلالية والسرية التامة لحماية مصالح عملائنا وضمان الحيادية
+                             والموضوعية.</p>
+                        <div class="cover">
+                          <h3 data-ar="المراجعة والتدقيق الخارجي" data-en="External Audit and Assurance" class="text-white">المراجعة والتدقيق الخارجي</h3>
+                        </div>
+                      </div>
+                  </div>
+
+                  <!-- 3. الالتزام بضريبة الخصم والإضافة -->
+                   <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                      <div class="book service3 h-100">
+                       <p data-en="Audit Trip provides a comprehensive range of accounting and financial services tailored to meet the needs of both small and large
+                          enterprises. We manage accounting records and transaction entries with absolute accuracy and full compliance with
+                          applicable regulations. Our services include preparing journal entries, managing bank reconciliations, customer and supplier accounts, as well as generating periodic financial reports to assess performance
+                          accurately. We also offer flexible accounting solutions using the latest digital systems to ensure efficiency and speed. Our team
+                          strives to add value by optimizing financial cycles, reducing operating costs, and achieving full financial compliance." data-ar="يوفر مكتب اوديت تريب مجموعة متكاملة من الخدمات المحاسبية والمالية التي تلبي احتياجات الشركات والمؤسسات الصغيرة والكبيرة على حد سواء. نعمل على تنظيم الحسابات وتسجيل المعاملات بدقة تامة مع الالتزام التام بالأنظمة المعمول بها. تشمل خدماتنا إعداد قيود اليومية، ومتابعة الحسابات البنكية، وحسابات العملاء والموردين، بالإضافة إلى تقديم تقارير مالية دورية تساعد على تقييم الأداء المالي بدقة. كما نوفر حلول محاسبية مرنة باستخدام أحدث الأنظمة الرقمية لضمان الكفاءة والسرعة في الأداء. يهدف فريقنا إلى تقديم قيمة مضافة من خلال تحسين الدورة المالية وتقليل التكاليف التشغيلية وتحقيق الامتثال المالي الكامل." class="lh-lg">يوفر مكتب اوديت تريب مجموعة متكاملة من الخدمات المحاسبية والمالية التي تلبي احتياجات
+                          الشركات والمؤسسات الصغيرة والكبيرة على حد سواء. نعمل على تنظيم الحسابات وتسجيل
+                          المعاملات بدقة تامة مع الالتزام التام بالأنظمة المعمول بها. تشمل خدماتنا إعداد قيود اليومية،
+                          ومتابعة الحسابات البنكية، وحسابات العملاء والموردين، بالإضافة إلى تقديم تقارير مالية دورية
+                          تساعد على تقييم الأداء المالي بدقة. كما نوفر حلول محاسبية مرنة باستخدام أحدث الأنظمة
+                          الرقمية لضمان الكفاءة والسرعة في الأداء. يهدف فريقنا إلى تقديم قيمة مضافة من خلال تحسين
+                          الدورة المالية وتقليل التكاليف التشغيلية وتحقيق الامتثال المالي الكامل.</p>
+                        <div class="cover">
+                          <h3 class="text-white" data-ar="الخدمات المحاسبية والمالية" data-en="Accounting and Financial Services">الخدمات المحاسبية والمالية</h3>
+                        </div>
+                      </div>
+                  </div>
+
+                  <!-- 4. تسجيل التأمينات الاجتماعية -->
+                 <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                      <div class="book service4 h-100">
+                        <p data-ar="يقدم مكتب اوديت تريب خدمات استشارية ضريبية متكاملة لمساعدة الشركات في فهم التزاماتها الضريبية والامتثال للقوانين الضريبية المعمول بها. يشمل نطاق خدماتنا إعداد الإقرارات الضريبية، والتخطيط الضريبي لتقليل العبء الضريبي، وتمثيل العملاء أمام الجهات الضريبية في حالات الفحص والمنازعات. نحرص على إبقاء عملائنا على اطلاع دائم بأي تحديثات تشريعية قد تؤثر على ً نشاطهم. كما نقدم حلولا مخصصة تتناسب مع طبيعة كل نشاط تجاري وقطاع اقتصادي. يعتمد فريقنا على خبرة عملية ومعرفة عميقة بالقوانين الضريبية المحلية والدولية لضمان أقصى استفادة ممكنة بأقل مخاطرة ضريبية ممكنة." data-en="Audit Trip provides comprehensive tax advisory services to help companies understand their tax obligations and comply with applicable tax laws. Our services include preparing tax returns, tax
+                            planning to minimize liability, and representing clients before tax authorities during audits and disputes. We ensure our clients stay informed about any legislative updates that may impact their
+                            operations. We also deliver customized solutions that align with each business type and economic sector. Our team leverages practical experience and deep knowledge of local and international tax
+                            regulations to ensure clients gain maximum benefits with minimal tax risks." class="lh-lg">يقدم مكتب اوديت تريب خدمات استشارية ضريبية متكاملة لمساعدة الشركات في فهم التزاماتها
+                            الضريبية والامتثال للقوانين الضريبية المعمول بها. يشمل نطاق خدماتنا إعداد الإقرارات الضريبية،
+                            والتخطيط الضريبي لتقليل العبء الضريبي، وتمثيل العملاء أمام الجهات الضريبية في حالات
+                            الفحص والمنازعات. نحرص على إبقاء عملائنا على اطلاع دائم بأي تحديثات تشريعية قد تؤثر على
+                            ً نشاطهم. كما نقدم حلولا مخصصة تتناسب مع طبيعة كل نشاط تجاري وقطاع اقتصادي. يعتمد
+                            فريقنا على خبرة عملية ومعرفة عميقة بالقوانين الضريبية المحلية والدولية لضمان أقصى استفادة
+                            ممكنة بأقل مخاطرة ضريبية ممكنة.</p>
+                            <div class="cover">
+                          <h3 data-ar="الاستشارات الضريبية" data-en="Tax Advisory Services" class="text-white">الاستشارات الضريبية</h3>
+                        </div>
+                      </div>
+                  </div>
+                 <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                      <div class="book service5 h-100">
+                        <p data-ar="يسهل مكتب اوديت تريب عملية تأسيس وتسجيل الشركات الجديدة من خلال توفير خدمات ً متكاملة تبدأ من اختيار الشكل القانوني المناسب، مرورا بإعداد العقود واللوائح، وانتهاء بتسجيل الشركة لدى الجهات المختصة. نعمل على توجيه العملاء في كل خطوة لضمان التزامهم بكافة المتطلبات القانونية والإجرائية. كما نقدم خدمات فتح السجلات التجارية، واستخراج البطاقة الضريبية، والتسجيل في مصلحة الضرائب والتأمينات. تهدف خدماتنا إلى تقليل الوقت والجهد المبذولين من قبل العملاء، وتوفير بداية قانونية سليمة ومهيأة للنمو. ويستفيد عملاؤنا من خبراتنا في بيئات الأعمال المحلية والدولية لضمان تأسيس ناجح وآمن." data-en="Audit Trip streamlines the process of forming and registering new companies by providing comprehensive services that begin with choosing the appropriate legal structure, drafting contracts and bylaws, and ending with official registration with the relevant authorities. We guide clients through each step to ensure full compliance with legal and procedural requirements. Our services include commercial registration, tax card issuance, and registration with the tax and social insurance authorities. Our goal is to minimize the time and effort clients invest, ensuring a legally sound and growth-ready foundation. Clients benefit from our experience in both local and international business environments for secure and successful establishment." class="lh-lg">يسهل مكتب اوديت تريب عملية تأسيس وتسجيل الشركات الجديدة من خلال توفير خدمات
+ً متكاملة تبدأ من اختيار الشكل القانوني المناسب، مرورا بإعداد العقود واللوائح، وانتهاء بتسجيل
+الشركة لدى الجهات المختصة. نعمل على توجيه العملاء في كل خطوة لضمان التزامهم بكافة
+المتطلبات القانونية والإجرائية. كما نقدم خدمات فتح السجلات التجارية، واستخراج البطاقة
+الضريبية، والتسجيل في مصلحة الضرائب والتأمينات. تهدف خدماتنا إلى تقليل الوقت والجهد
+المبذولين من قبل العملاء، وتوفير بداية قانونية سليمة ومهيأة للنمو. ويستفيد عملاؤنا من
+خبراتنا في بيئات الأعمال المحلية والدولية لضمان تأسيس ناجح وآمن.</p>
+                        <div class="cover">
+                          <h3 data-ar="تأسيس وتسجيل الشركات" data-en="Company Formation and Registration" class="text-white">تأسيس وتسجيل الشركات</h3>
+                        </div>
+                      </div>
+                  </div>
+                 <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                      <div class="book service6 h-100">
+                        <p class="lh-lg" data-en="Audit Trip offers advanced financial planning and budgeting services tailored to support both short- and long-term business goals. Our financial consultants analyze past performance and future forecasts to deliver practical and actionable financial plans. Our services include annual budget preparation, detailed financial forecasts, and variance analysis between estimates and actual results. We aim to improve financial efficiency, enhance internal controls, and empower management with accurate data for decision-making. We work with diverse companies to help them achieve sustainable financial balance that supports growth and expansion." data-ar="يوفر مكتب اوديت تريب خدمات التخطيط المالي المتقدم وإعداد الميزانيات التشغيلية والاستثمارية بما يواكب أهداف الشركات قصيرة وطويلة المدى. يعمل مستشارونا الماليون على تحليل الأداء السابق والتوقعات المستقبلية لتقديم خطط مالية عملية وقابلة للتنفيذ. تشمل خدماتنا إعداد ميزانيات سنوية وتقديرات مالية مفصلة وتحليل الانحرافات بين التقديرات والنتائج الفعلية. نهدف إلى تحسين الكفاءة المالية، وتعزيز الرقابة الداخلية، وتمكين الإدارة من اتخاذ قرارات مبنية على بيانات دقيقة. نحن نعمل مع مختلف أنواع الشركات لمساعدتها على تحقيق توازن مالي مستدام يدعم النمو والتوسع.">يوفر مكتب اوديت تريب خدمات التخطيط المالي المتقدم وإعداد الميزانيات التشغيلية والاستثمارية بما يواكب أهداف الشركات قصيرة وطويلة المدى. يعمل مستشارونا الماليون على تحليل الأداء السابق والتوقعات المستقبلية لتقديم خطط مالية عملية وقابلة للتنفيذ. تشمل خدماتنا إعداد ميزانيات سنوية وتقديرات مالية مفصلة وتحليل الانحرافات بين التقديرات والنتائج الفعلية. نهدف إلى تحسين
+الكفاءة المالية، وتعزيز الرقابة الداخلية، وتمكين الإدارة من اتخاذ قرارات مبنية على بيانات دقيقة. نحن نعمل مع مختلف أنواع الشركات لمساعدتها على تحقيق توازن مالي مستدام يدعم النمو والتوسع.</p>
+                        <div class="cover">
+                          <h3 data-ar="التخطيط المالي وإعداد الميزانيات" data-en="Financial Planning and Budgeting" class="text-white">التخطيط المالي وإعداد الميزانيات</h3>
+                        </div>
+                      </div>
+                  </div>
+                 <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                      <div class="book service7 h-100">
+                        <p class="lh-lg" data-en="Feasibility studies are a cornerstone of successful investment decisions, and Audit Trip delivers this service with high efficiency using advanced financial and economic analysis models. We conduct comprehensive feasibility studies covering technical, financial, and marketing aspects, including key performance indicators, cost structures, and expected returns. We also offer accurate financial valuation services for assets and projects using internationally recognized standards. These studies help our clients reduce risks, select the most suitable opportunities, and enhance their ability to attract investors and potential partners. We believe that sound decisions stem from comprehensive analysis based on reliable data and well-studied forecasts." data-ar="تُعد دراسات الجدوى الاقتصادية من الركائز الأساسية لاتخاذ قرارات استثمارية ناجحة، ويقدم اوديت تريب هذه الخدمة بكفاءة عالية باستخدام نماذج تحليل مالية واقتصادية متقدمة. نقوم بدراسة الجدوى الفنية والمالية والتسويقية للمشروعات مع تحديد مؤشرات الأداء والتكلفة والعائد المتوقعة. كما نقدم خدمات تقييم مالي دقيق للأصول والمشروعات، باستخدام معايير معترف بها دوليًا. تساعد هذه الدراسات عملاءنا على تقليل المخاطر، واختيار الفرص الأنسب ،وتعزيز القدرة على جذب المستثمرين والشركاء المحتملين. نحن نؤمن أن القرار السليم يبدأ من تحليل متكامل قائم على بيانات موثوقة وتوقعات مدروسة.">تُعد دراسات الجدوى الاقتصادية من الركائز الأساسية لاتخاذ قرارات استثمارية ناجحة، ويقدم اوديت تريب  هذه الخدمة بكفاءة عالية باستخدام نماذج تحليل مالية واقتصادية متقدمة. نقوم بدراسة الجدوى الفنية والمالية والتسويقية للمشروعات مع تحديد مؤشرات الأداء والتكلفة والعائد المتوقعة. كما نقدم خدمات تقييم مالي دقيق للأصول والمشروعات، باستخدام معايير معترف بها دوليًا. تساعد هذه الدراسات عملاءنا على تقليل المخاطر، واختيار الفرص الأنسب ،وتعزيز القدرة على جذب المستثمرين والشركاء المحتملين. نحن نؤمن أن القرار السليم يبدأ من تحليل متكامل قائم على بيانات موثوقة وتوقعات مدروسة.</p>
+                        <div class="cover">
+                          <h3 class="text-white" data-ar="دراسات الجدوى والتقييم المالي" data-en="Feasibility Studies and Financial Valuation">دراسات الجدوى والتقييم المالي</h3>
+                        </div>
+                      </div>
+                  </div>
+                 <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                      <div class="book service8 h-100">
+                        <p data-en="Audit Trip recognizes the critical importance of full compliance with financial and regulatory frameworks as a core element for maintaining corporate reputation and sustainability. We offer advisory services to help clients understand and efficiently meet regulatory requirements. This includes reviewing internal policies and procedures and offering recommendations to enhance control and governance systems. We assess potential risks and propose practical solutions to mitigate them. Our firm is committed to transparency and integrity, and we continuously update our knowledge of legal and regulatory changes. Our goal is to empower our clients to operate confidently within a stable and evolving legal environment." class="lh-lg" data-ar="يدرك مكتب اوديت تريب أهمية الامتثال الكامل للأنظمة واللوائح المالية والتنظيمية كعنصر أساسي في الحفاظ على سمعة الشركات واستدامتها. نقدم خدمات استشارية لمساعدة عملائنا على فهم متطلبات الهيئات الرقابية والامتثال لها بكفاءة. يشمل ذلك مراجعة السياسات والإجراءات الداخلية، وتقديم توصيات لتحسين أنظمة الرقابة والحوكمة. كما نعمل على تقييم المخاطر المحتملة واقتراح حلول عملية للحد منها.يعتمد مكتبنا على مبدأ الشفافية والنزاهة، ونعمل باستمرار على تحديث معارفنا بالتغيرات القانونية والتنظيمية. هدفنا هو تمكين عملائنا من العمل بثقة واطمئنان ضمن بيئة قانونية مستقرة ومتطورة.">يدرك مكتب اوديت تريب أهمية الامتثال الكامل للأنظمة واللوائح المالية والتنظيمية كعنصر
+أساسي في الحفاظ على سمعة الشركات واستدامتها. نقدم خدمات استشارية لمساعدة عملائنا
+على فهم متطلبات الهيئات الرقابية والامتثال لها بكفاءة. يشمل ذلك مراجعة السياسات
+والإجراءات الداخلية، وتقديم توصيات لتحسين أنظمة الرقابة والحوكمة. كما نعمل على تقييم
+المخاطر المحتملة واقتراح حلول عملية للحد منها.يعتمد مكتبنا على مبدأ الشفافية والنزاهة،
+ونعمل باستمرار على تحديث معارفنا بالتغيرات القانونية والتنظيمية. هدفنا هو تمكين عملائنا
+من العمل بثقة واطمئنان ضمن بيئة قانونية مستقرة ومتطورة.</p>
+                        <div class="cover">
+                          <h3 class="text-white" data-ar="الامتثال والالتزام بالأنظمة المالية" data-en="Regulatory Compliance and Financial Governance">الامتثال والالتزام بالأنظمة المالية</h3>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <section id="faq" class="faq section-padding">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="custom-heading text-center" data-ar="الأسئلة الشائعة" data-en="Frequently Asked Questions">الأسئلة الشائعة</h2>        </div>
+        <div class="row g-4 justify-content-center align-items-center mt-5" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-md-6">
+            <div class="accordion fade-in" id="faqAccordion">
+                  <!-- FAQ Item 1 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1"
+                      data-ar="ما هي الخدمات التي يقدمها مكتبكم؟"
+                      data-en="What services does your office provide?">
+                      ما هي الخدمات التي يقدمها مكتبكم؟
+                    </button>
+                  </h2>
+                  <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body"
+                      data-ar="نقدم خدمات محاسبية ومالية متكاملة تشمل: إعداد القوائم المالية، تقديم الإقرارات الضريبية، مراجعة الحسابات، تأسيس الشركات، الاستشارات الضريبية، دراسات الجدوى، وتصفيات الشركات."
+                      data-en="We offer integrated accounting and financial services including: preparing financial statements, filing tax returns, auditing, company formation, tax consultations, feasibility studies, and company liquidations.">
+                      نقدم خدمات محاسبية ومالية متكاملة تشمل: إعداد القوائم المالية، تقديم الإقرارات الضريبية، مراجعة الحسابات، تأسيس الشركات، الاستشارات الضريبية، دراسات الجدوى، وتصفيات الشركات.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2"
+                      data-en="How can I book a consultation with an advisor?"
+                      data-ar="كيف يمكنني حجز استشارة مع أحد المستشارين؟">
+                      كيف يمكنني حجز استشارة مع أحد المستشارين؟
+                    </button>
+                  </h2>
+                  <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body"
+                      data-ar="يمكنك حجز استشارة عبر الاتصال الهاتفي أو من خلال نموذج التواصل على موقعنا الإلكتروني، وسيتم تحديد موعد يناسبك مع أحد مستشارينا المتخصصين."
+                      data-en="You can book a consultation via phone call or through our website contact form. We will arrange a suitable time with one of our expert advisors.">
+                      يمكنك حجز استشارة عبر الاتصال الهاتفي أو من خلال نموذج التواصل على موقعنا الإلكتروني، وسيتم تحديد موعد يناسبك مع أحد مستشارينا المتخصصين.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3"
+                      data-en="What documents are required to prepare tax returns?"
+                      data-ar="ما هي المستندات المطلوبة لإعداد الإقرارات الضريبية؟">
+                      ما هي المستندات المطلوبة لإعداد الإقرارات الضريبية؟
+                    </button>
+                  </h2>
+                  <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body"
+                      data-ar="نحتاج إلى كشوف الحسابات البنكية، والفواتير الصادرة والواردة، وبيانات الرواتب، وأي مستندات أخرى تتعلق بالدخل والمصروفات خلال السنة المالية."
+                      data-en="We require bank statements, issued and received invoices, payroll details, and any other documents related to income and expenses during the fiscal year.">
+                      نحتاج إلى كشوف الحسابات البنكية، والفواتير الصادرة والواردة، وبيانات الرواتب، وأي مستندات أخرى تتعلق بالدخل والمصروفات خلال السنة المالية.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4"
+                      data-en="Do you offer services for small and medium-sized businesses?"
+                      data-ar="هل تقدمون خدمات للشركات الصغيرة والمتوسطة؟">
+                      هل تقدمون خدمات للشركات الصغيرة والمتوسطة؟
+                    </button>
+                  </h2>
+                  <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body"
+                      data-ar="نعم، نقدم حلول محاسبية ومالية مصممة خصيصًا لتلبية احتياجات الشركات الصغيرة والمتوسطة، بما في ذلك إعداد التقارير الدورية، والتخطيط الضريبي، والاستشارات المالية."
+                      data-en="Yes, we provide accounting and financial solutions tailored to the needs of small and medium-sized businesses, including periodic reporting, tax planning, and financial consulting.">
+                      نعم، نقدم حلول محاسبية ومالية مصممة خصيصًا لتلبية احتياجات الشركات الصغيرة والمتوسطة، بما في ذلك إعداد التقارير الدورية، والتخطيط الضريبي، والاستشارات المالية.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5"
+                      data-en="Do you offer remote accounting services?"
+                      data-ar="هل تقدمون خدمات المحاسبة عن بعد؟">
+                      هل تقدمون خدمات المحاسبة عن بعد؟
+                    </button>
+                  </h2>
+                  <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body"
+                      data-ar="نعم، نوفر خدمات المحاسبة عن بعد باستخدام أنظمة محاسبية سحابية آمنة، مما يتيح لك متابعة حساباتك وإدارتها دون الحاجة إلى التواجد الفعلي."
+                      data-en="Yes, we provide remote accounting services using secure cloud-based systems, allowing you to monitor and manage your accounts without being physically present.">
+                      نعم، نوفر خدمات المحاسبة عن بعد باستخدام أنظمة محاسبية سحابية آمنة، مما يتيح لك متابعة حساباتك وإدارتها دون الحاجة إلى التواجد الفعلي.
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+           <div class="col-md-6">
+            <div class="img">
+              <img src="images/questions.jpeg" class="w-100" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+      <section class="CTA section-padding">
+        <div class="container text-center d-flex flex-column justify-content-center align-items-center">
+          <h2 data-ar="هل تبحث عن استشارة مالية؟" data-en="Are you looking for financial advice?" class="mb-4">هل تبحث عن استشارة مالية؟</h2>
+        <a href="contact.html" target="_blank" data-ar="احجز استشارة الان" data-en="Book a consultation now" class="text-decoration-none primary-btn d-inline-block">احجز استشارة الان</a>
+        </div>
+      </section>
+  </main>
+  <!-- Footer -->
+  <footer class="footer bg-dark text-white">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 mb-4 mb-lg-0">
+          <h3> 
+             Audit Trip
+          </h3>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 mb-6 mb-md-0">
+          <h5 data-ar="روابط سريعة" data-en="Quick Links">روابط سريعة</h5>
+          <ul class="footer-links">
+            <li><a href="#home" data-en="Home" data-ar="الرئيسية">الرئيسية</a></li>
+            <li><a href="#services" data-en="Services" data-ar="الخدمات">الخدمات</a></li>
+            <li><a href="#faq" data-en="FAQ" data-ar="الأسئلة الشائعة">الأسئلة الشائعة</a></li>
+            <li><a href="contact.html" data-en="Contact" data-ar="اتصل بنا">اتصل بنا</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+          <h5 data-ar="خدماتنا" data-en="Our Services">خدماتنا</h5>
+            <ul class="footer-links">
+            <li><a data-en="Preparation of Financial Statements" data-ar="إعداد القوائم المالية" href="#services">إعداد القوائم المالية</a></li>
+            <li><a data-ar="المراجعة والتدقيق الخارجي" data-en="External Audit and Assurance" href="#services">المراجعة والتدقيق الخارجي</a></li>
+            <li><a data-ar="الخدمات المحاسبية والمالية" data-en="Accounting and Financial Services" href="#services">الخدمات المحاسبية والمالية</a></li>
+            <li><a data-ar="الاستشارات الضريبية" data-en="Tax Advisory Services" href="#services">الاستشارات الضريبية</a></li>
+            <li><a data-en="Learn More" data-ar="اعرف المزيد" href="#services">اعرف المزيد</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 ">
+          <h5 data-ar="معلومات الاتصال" data-en="Contact Info">معلومات الاتصال</h5>
+          <ul class="footer-contact">
+            <li><i class="fas fa-phone mx-3"></i> 0227084827</li>
+            <li><i class="fas fa-envelope mx-3"></i>Info@audittrip.com</li>
+            <li data-en="17 Mohamed Sayed Ahmed Cross with khristo st. Helwan, Cairo" data-ar="١٧ شارع محمد سيد أحمد متفرع من كريستو، حلوان، القاهرة">
+              <i class="fas fa-location-dot ms-3"></i>
+              ١٧ شارع محمد سيد أحمد متفرع من كريستو، حلوان، القاهرة
+            </li>          
+          </ul>
+        </div>
+      </div>
+      <hr class="footer-divider">
+      <div class="row footer-bottom">
+        <div class="col-md-6">
+          <p data-ar="جميع الحقوق محفوظة لشركة  Audit Trip لعام ٢٠٢٥." data-en="&copy; 2025 Audit Trip. All Rights Reserved.">جميع الحقوق محفوظة لشركة  Audit Trip لعام ٢٠٢٥.</p>
+        </div>
+        <div class="col-md-6 end-text">
+           <div class="d-flex justify-content-center align-items-center gap-2">
+                  <span class="text-center" data-en="Design and programming by" data-ar="تصميم وبرمجه">تصميم وبرمجه </span>
+                  <div class="gmt-logo">
+                    <a href="https://www.facebook.com/profile.php?id=100090592885243&mibextid=ZbWKwL" target="_blank" class=""><img src="images/GMT.png" alt="GMT logo" class="GMT"></a>
+                  </div>
+                </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
