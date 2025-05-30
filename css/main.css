@@ -167,7 +167,6 @@ header{
 }
  .elementor-icon-1 svg {
     position: absolute;
-    /* top: 40%; */
      top: 68%;
      left: 5%;
      transform: translate(-50%,-50%);
@@ -253,30 +252,6 @@ header p{
     display: block;
 }
 
-
-/* .custom-heading::before,
-.custom-heading::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  border-color: #3c69f0;
-  border-style: solid;
-  display: block;
-} */
-
-/* .custom-heading::before {
-  border-width: 1px 0;
-  width: 80px;
-  bottom: 0;
-}
-
-.custom-heading::after {
-  border-width: 1px 0;
-  width: 160px;
-  bottom: -8px;
-} */
-
 .inner-card{
   background-color: var(--white);
   padding: 15px;
@@ -288,7 +263,6 @@ header p{
 }
 
 
-/* Stats Section */
 .stats {
   padding: 40px 0 80px;
 }
@@ -480,12 +454,12 @@ img {
   border-radius: 100px 550px 100px 550px;
   position: relative;
   z-index: 2;
-  display: inline-block; /* Ensure ::after is rendered correctly */
+  display: inline-block; 
 }
 
 .faq .img::after {
   content: "";
-  position: absolute;       /* Required for positioning */
+  position: absolute;       
   background-color: var(--secondary);
   width: 90%;
   opacity: .6;
@@ -570,7 +544,6 @@ html[dir="rtl"] .accordion-button::after{
 }
 }
 /* Contact Section */
-/* From Uiverse.io by DavidTM96 */ 
 
 .contact-form{
    background: linear-gradient(var(--primary-dark), var(--primary-dark)) padding-box,

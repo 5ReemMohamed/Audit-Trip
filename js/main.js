@@ -1,6 +1,6 @@
-// window.onload = function () {
-//   window.scrollTo(0, 0);
-// };
+window.onload = function () {
+  window.scrollTo(0, 0);
+};
 
 document.addEventListener('DOMContentLoaded', function () {
   'use strict';
@@ -35,9 +35,9 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
-  // Stats counter animation
+  
   const counters = document.querySelectorAll('.counter');
-  const speed = 200; // Animation speed in milliseconds
+  const speed = 200; 
   
   const startCounters = () => {
     counters.forEach(counter => {
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   };
 
-  // Intersection Observer for stats section
+  
   const statsSection = document.querySelector('.stats');
   if (statsSection) {
     const observer = new IntersectionObserver((entries) => {
