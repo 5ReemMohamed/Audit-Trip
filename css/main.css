@@ -339,7 +339,7 @@ html[dir="ltr"] .hero-header p {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-   padding: 80px 0 80px !important
+  
 }
 .stat-card {
   text-align: center;
@@ -905,5 +905,5 @@ footer .gmt-logo{
 #about-audittrip .card-img-top {
   height: 250px;
   object-fit: cover;
-   border-radius: 16px;
+  border-radius: 16px;
 }
