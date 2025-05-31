@@ -302,8 +302,8 @@ html[dir="ltr"] .hero-header p {
     background-color: var(--secondary);
     justify-content: center;
     align-items: center;
-    width: 1vw;
-    height: 1vw;
+    width: 20px;
+    height: 20px;
     display: flex;
     position: relative;
     border-radius: 999px;
