@@ -887,3 +887,23 @@ footer .gmt-logo{
   perspective: 2700px;
 }
 }
+
+#about-audittrip .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 16px;
+  overflow: hidden;
+}
+#about-audittrip .card .card-title{
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+#about-audittrip .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+#about-audittrip .card-img-top {
+  height: 250px;
+  object-fit: cover;
+   border-radius: 16px;
+}
