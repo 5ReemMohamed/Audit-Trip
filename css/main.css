@@ -50,7 +50,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 102px;
+  scroll-padding-top: 125px;
 }
 a {
   color: var(--white);
@@ -270,7 +270,7 @@ html[dir="ltr"] .hero-header p {
   display: flex;
   border-radius: 50px;
   justify-content: center;
-  align-items: center; /* align content to the top */
+  align-items: center; 
   
 }
 .about-badge{
@@ -290,7 +290,7 @@ html[dir="ltr"] .hero-header p {
   border-radius: 50px;
 }
 .about-heading span{
- padding: 0.2rem 1.25rem 1rem; /* reduce top padding */
+ padding: 0.2rem 1.25rem 1rem;
 }
 
 
@@ -491,7 +491,7 @@ img {
   border-radius: var(--border-radius);
   padding: 1.25rem;
   box-shadow: none;
-  font-size: 8px;
+  font-size: 12px;
 }
 .accordion-button:not(.collapsed) {
     color:var(--white);
@@ -517,14 +517,14 @@ html[dir="rtl"] .accordion-button::after{
 .accordion-body {
   padding: 1.25rem;
   background-color: rgba(255, 255, 255, 0.8);
-  font-size: 8px;
+  font-size: 12px;
 }
 @media screen and (min-width : 400px) {
    .accordion-button {
-  font-size: 12px;
+  font-size: 14px;
 }
   .accordion-body {
-  font-size: 12px;
+  font-size: 14px;
 }
 }
 @media screen and (min-width : 668px) {
