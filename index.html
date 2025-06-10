@@ -42,7 +42,7 @@
           <li class="nav-item"><a class="nav-link" data-ar="من نحن" data-en="About" href="#about">من نحن</a></li>
           <li class="nav-item"><a class="nav-link" data-ar="خدماتنا" data-en="Services" href="#services">خدماتنا</a></li>
           <li class="nav-item"><a class="nav-link" data-ar="هويتنا" data-en="Our Identity" href="#about-audittrip">هويتنا</a></li>
-          <li class="nav-item"><a class="nav-link" data-ar="المدونة" data-en="Blog" href="blog.html" target="_blank">المدونة</a></li>
+          <li class="nav-item"><a class="nav-link" data-ar="المدونة" data-en="Blog" href="blog.html" target="_blank" rel="opener">المدونة</a></li>
           <li class="nav-item"><a class="nav-link" data-ar="اتصل بنا" data-en="Contact" href="contact.html" target="_blank" rel="opener">اتصل بنا</a></li>
         </ul>
         <div class="lang-switch-wrapper d-flex justify-content-center">
@@ -446,24 +446,31 @@
       </section>
   </main>
   <!-- Footer -->
-  <footer class="footer bg-dark text-white">
+  <footer class="footer text-white px-2 py-5">
     <div class="container">
       <div class="row g-4">
         <div class="col-lg-4 mb-4 mb-lg-0">
           <h3> 
              Audit Trip
           </h3>
-          <div class="social-links">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+           <p class="footer-p"   data-en="We provide comprehensive accounting services to companies and individuals, adhering to the highest standards of quality and professionalism."
+               data-ar="نقدم خدمات محاسبية متكاملة للشركات والأفراد مع الالتزام بأعلى معايير الجودة والاحترافية">
+          نقدم خدمات محاسبية متكاملة للشركات والأفراد مع الالتزام بأعلى معايير الجودة والاحترافية
+        </p>
+         <div class="social-links">
+            <a href="https://www.facebook.com/share/1Sh2X994j8/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/201011159119" target="_blank" class="whatsapp-button" aria-label="Chat on WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="tel:+201011159119" class="phone-button" aria-label="Call me">
+              <i class="fa-solid fa-phone-flip"></i>
+            </a>
           </div>
         </div>
         <div class="col-lg-2 col-md-4 mb-6 mb-md-0">
           <h5 data-ar="روابط سريعة" data-en="Quick Links">روابط سريعة</h5>
           <ul class="footer-links">
-            <li><a href="#home" data-en="Home" data-ar="الرئيسية">الرئيسية</a></li>
+            <li><a href="#header" data-en="Home" data-ar="الرئيسية">الرئيسية</a></li>
             <li><a href="#services" data-en="Services" data-ar="الخدمات">الخدمات</a></li>
             <li><a href="#faq" data-en="FAQ" data-ar="الأسئلة الشائعة">الأسئلة الشائعة</a></li>
             <li><a href="contact.html" data-en="Contact" data-ar="اتصل بنا">اتصل بنا</a></li>
@@ -507,7 +514,19 @@
       </div>
     </div>
   </footer>
-
+   <div class="fixed-contact-buttons">
+          <a href="https://wa.me/201011159119" target="_blank" class="whatsapp-button" aria-label="Chat on WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="tel:+201011159119" class="phone-button" aria-label="Call me">
+              <i class="fa-solid fa-phone-flip"></i>
+            </a>
+</div>
+<div class="fixed-scroll">
+    <button id="scrollToTopBtn" title="Go to top" aria-label="Scroll to top" class="scroll-top">
+          <i class="fa-solid fa-angle-up"></i>
+        </button>
+</div>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="js/main.js"></script>

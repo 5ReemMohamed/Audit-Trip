@@ -5,7 +5,6 @@ window.onload = function () {
 document.addEventListener('DOMContentLoaded', function () {
   'use strict';
   
-
   const langSwitchBtn = document.getElementById('langSwitch');
   const translatableElements = document.querySelectorAll('[data-en][data-ar]');
 
@@ -21,20 +20,42 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const successMessage = document.getElementById("formSuccess");
   const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-const navbarCollapse = document.getElementById('navbarSupportedContent');
+  const navbarCollapse = document.getElementById('navbarSupportedContent');
+  const navbar = document.querySelector(".navbar");
+  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
-navLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    const isNavbarVisible = window.getComputedStyle(navbarCollapse).display !== 'none';
-
-    if (isNavbarVisible && window.innerWidth < 992) {
-      const collapseInstance = bootstrap.Collapse.getInstance(navbarCollapse);
-      if (collapseInstance) {
-        collapseInstance.hide(); 
-      }
+  // Scroll event listener
+  window.addEventListener("scroll", () => {
+    if (scrollToTopBtn) {
+      scrollToTopBtn.style.display = window.scrollY > 300 ? "flex" : "none";
+    }
+    if (navbar) {
+      navbar.classList.toggle("scrolled", window.scrollY > 50);
     }
   });
-});
+
+  // Scroll to top button
+  if (scrollToTopBtn) {
+    scrollToTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
+  // Navbar link behavior
+  if (navLinks && navbarCollapse) {
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        const isNavbarVisible = window.getComputedStyle(navbarCollapse).display !== 'none';
+
+        if (isNavbarVisible && window.innerWidth < 992) {
+          const collapseInstance = bootstrap.Collapse.getInstance(navbarCollapse);
+          if (collapseInstance) {
+            collapseInstance.hide(); 
+          }
+        }
+      });
+    });
+  }
 
   let validationErrors = {
     name: false,
@@ -44,7 +65,7 @@ navLinks.forEach(link => {
   };
 
   function updatePlaceholders(lang) {
-    [nameInput, emailInput, messageInput,phoneInput].forEach(input => {
+    [nameInput, emailInput, messageInput, phoneInput].forEach(input => {
       if (input) {
         const placeholder = input.getAttribute(`data-${lang}-placeholder`);
         if (placeholder) input.placeholder = placeholder;
@@ -52,6 +73,7 @@ navLinks.forEach(link => {
     });
   }
   
+  // Counter animation
   const counters = document.querySelectorAll('.counter');
   const speed = 200; 
   
@@ -75,9 +97,9 @@ navLinks.forEach(link => {
     });
   };
 
-  
+  // Intersection Observer for counters
   const statsSection = document.querySelector('.stats');
-  if (statsSection) {
+  if (statsSection && counters.length > 0) {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -93,53 +115,53 @@ navLinks.forEach(link => {
   function updateErrorMessages(lang) {
     const isRTL = lang === 'ar';
 
-    if (validationErrors.name) {
+    if (validationErrors.name && nameError) {
       nameError.innerHTML = isRTL ? "الاسم يجب أن يكون على الأقل 3 أحرف." : "Name must be at least 3 characters.";
     }
 
-    if (validationErrors.email) {
+    if (validationErrors.email && emailError) {
       emailError.innerHTML = isRTL ? "يرجى إدخال بريد إلكتروني صالح." : "Please enter a valid email.";
     }
 
-     if (validationErrors.phone) {
+    if (validationErrors.phone && phoneError) {
       phoneError.innerHTML = isRTL ? "يرجى إدخال رقم هاتف صالح." : "Please enter a valid phone number.";
     }
 
-    if (validationErrors.message) {
+    if (validationErrors.message && messageError) {
       messageError.innerHTML = isRTL ? "يجب أن تكون الرسالة 10 أحرف على الأقل." : "Message must be at least 10 characters.";
     }
   }
 
-  langSwitchBtn.addEventListener('click', () => {
-    const currentLang = langSwitchBtn.getAttribute('data-lang');
-    const newLang = currentLang === 'ar' ? 'en' : 'ar';
+  // Language switch functionality
+  if (langSwitchBtn) {
+    langSwitchBtn.addEventListener('click', () => {
+      const currentLang = langSwitchBtn.getAttribute('data-lang');
+      const newLang = currentLang === 'ar' ? 'en' : 'ar';
 
-    translatableElements.forEach(el => {
-      const icon = el.querySelector('i');
-      const text = el.getAttribute(`data-${newLang}`);
+      translatableElements.forEach(el => {
+        const icon = el.querySelector('i');
+        const text = el.getAttribute(`data-${newLang}`);
 
-      if (icon) {
-        el.innerHTML = '';
-        el.appendChild(icon);
-        el.append(' ' + text);
-      } else {
-        el.innerHTML = text;
-      }
+        if (icon) {
+          el.innerHTML = '';
+          el.appendChild(icon);
+          el.append(' ' + text);
+        } else {
+          el.innerHTML = text;
+        }
+      });
+
+      langSwitchBtn.innerHTML = newLang === 'ar' ? 'EN' : 'AR';
+      langSwitchBtn.setAttribute('data-lang', newLang);
+
+      document.documentElement.setAttribute('lang', newLang);
+      document.documentElement.setAttribute('dir', newLang === 'ar' ? 'rtl' : 'ltr');
+      document.documentElement.style.textAlign = newLang === 'ar' ? 'right' : 'left';
+
+      updatePlaceholders(newLang);
+      updateErrorMessages(newLang);
     });
-
-    langSwitchBtn.innerHTML = newLang === 'ar' ? 'EN' : 'AR';
-    langSwitchBtn.setAttribute('data-lang', newLang);
-
-    document.documentElement.setAttribute('lang', newLang);
-    document.documentElement.setAttribute('dir', newLang === 'ar' ? 'rtl' : 'ltr');
-    document.documentElement.style.textAlign = newLang === 'ar' ? 'right' : 'left';
-
-    updatePlaceholders(newLang);
-    updateErrorMessages(newLang);
-  });
-
-  
- 
+  }
 
   function validateAll() {
     let isValid = true;
@@ -151,54 +173,60 @@ navLinks.forEach(link => {
     const phone = phoneInput?.value.trim() || '';
     const message = messageInput?.value.trim() || '';
 
+    // Name validation
     if (name.length < 3) {
       validationErrors.name = true;
-      nameError.innerHTML = isRTL ? "الاسم يجب أن يكون على الأقل 3 أحرف." : "Name must be at least 3 characters.";
+      if (nameError) nameError.innerHTML = isRTL ? "الاسم يجب أن يكون على الأقل 3 أحرف." : "Name must be at least 3 characters.";
       isValid = false;
     } else {
       validationErrors.name = false;
-      nameError.innerHTML = "";
+      if (nameError) nameError.innerHTML = "";
     }
 
+    // Email validation
     const emailRegex = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
     if (!emailRegex.test(email)) {
       validationErrors.email = true;
-      emailError.innerHTML = isRTL ? "يرجى إدخال بريد إلكتروني صالح." : "Please enter a valid email.";
+      if (emailError) emailError.innerHTML = isRTL ? "يرجى إدخال بريد إلكتروني صالح." : "Please enter a valid email.";
       isValid = false;
     } else {
       validationErrors.email = false;
-      emailError.innerHTML = "";
+      if (emailError) emailError.innerHTML = "";
     }
 
-   const phoneRegex = /^[0-9]{8,15}$/;
+    // Phone validation
+    const phoneRegex = /^[0-9]{8,15}$/;
     if (!phoneRegex.test(phone)) {
       validationErrors.phone = true;
-      phoneError.innerHTML = isRTL ? "يرجى إدخال رقم هاتف صالح." : "Please enter a valid phone number.";
+      if (phoneError) phoneError.innerHTML = isRTL ? "يرجى إدخال رقم هاتف صالح." : "Please enter a valid phone number.";
       isValid = false;
     } else {
       validationErrors.phone = false;
-      phoneError.innerHTML = "";
+      if (phoneError) phoneError.innerHTML = "";
     }  
 
+    // Message validation
     if (message.length < 10) {
       validationErrors.message = true;
-      messageError.innerHTML = isRTL ? "يجب أن تكون الرسالة 10 أحرف على الأقل." : "Message must be at least 10 characters.";
+      if (messageError) messageError.innerHTML = isRTL ? "يجب أن تكون الرسالة 10 أحرف على الأقل." : "Message must be at least 10 characters.";
       isValid = false;
     } else {
       validationErrors.message = false;
-      messageError.innerHTML = "";
+      if (messageError) messageError.innerHTML = "";
     }
 
     return isValid;
   }
 
-  [nameInput, emailInput,phoneInput, messageInput].forEach(input => {
+  // Input validation listeners
+  [nameInput, emailInput, phoneInput, messageInput].forEach(input => {
     if (input) {
-         input?.addEventListener("input", validateAll);
-         input?.addEventListener("change", validateAll);
+      input.addEventListener("input", validateAll);
+      input.addEventListener("change", validateAll);
     }
   });
 
+  // Form submission
   if (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
@@ -206,10 +234,10 @@ navLinks.forEach(link => {
 
       if (validateAll()) {
         const formData = {
-          name: nameInput.value.trim(),
-          email: emailInput.value.trim(),
-          phone: phoneInput.value.trim(),
-          message: messageInput.value.trim()
+          name: nameInput?.value.trim() || '',
+          email: emailInput?.value.trim() || '',
+          phone: phoneInput?.value.trim() || '',
+          message: messageInput?.value.trim() || ''
         };
 
         localStorage.setItem("contactFormData", JSON.stringify(formData));
@@ -220,7 +248,7 @@ navLinks.forEach(link => {
         }
 
         form.reset();
-        validationErrors = { name: false, email: false, message: false };
+        validationErrors = { name: false, email: false, phone: false, message: false };
 
         setTimeout(() => {
           if (successMessage) successMessage.classList.add("d-none");
@@ -231,10 +259,12 @@ navLinks.forEach(link => {
     });
   }
 
-  // AOS Init
-  AOS.init({
-    offset: 120,
-    duration: 1000,
-    easing: 'ease-in-out',
-  });
+  // Initialize AOS
+  if (typeof AOS !== 'undefined') {
+    AOS.init({
+      offset: 120,
+      duration: 1000,
+      easing: 'ease-in-out',
+    });
+  }
 });

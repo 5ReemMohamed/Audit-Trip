@@ -287,6 +287,8 @@ html[dir="ltr"] .hero-header p {
   background-color: var(--white);
   color: var(--primary-dark);
   padding: 15px;
+  width: 40%;
+  text-align: center;
   border-radius: 50px;
 }
 .about-heading span{
@@ -495,7 +497,7 @@ img {
   border-radius: var(--border-radius);
   padding: 1.25rem;
   box-shadow: none;
-  font-size: 13px;
+  font-size: 12px;
 }
 .accordion-button:not(.collapsed) {
     color:var(--white);
@@ -507,7 +509,9 @@ img {
   box-shadow: none;
   border-color: var(--gray-300);
 }
-
+.footer{
+  background-color: var(--primary-dark) !important;
+}
 .accordion-button::after {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230A2463'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
 }
@@ -521,7 +525,7 @@ html[dir="rtl"] .accordion-button::after{
 .accordion-body {
   padding: 1.25rem;
   background-color: rgba(255, 255, 255, 0.8);
-  font-size: 13px;
+  font-size: 12px;
 }
 @media screen and (min-width : 415px) {
    .accordion-button {
@@ -560,6 +564,13 @@ html[dir="rtl"] .accordion-button::after{
 .services .card h3 {
     font-size: 1.7rem;
 }
+html[dir="rtl"] .footer-p{
+  padding-left: 65px;
+ }
+ html[dir="ltr"] .footer-p{
+  padding-right: 65px;
+  text-align: justify;
+ }
 }
 /* Contact Section */
 
@@ -731,6 +742,9 @@ text-align: left;
   color: var(--primary) !important;
   text-decoration: none;
 }
+.blog .card p{
+  text-align: justify;
+}
 .list-group-item {
     color: var(--white) !important;
     text-decoration: none;
@@ -740,7 +754,6 @@ text-align: left;
 /* Footer */
 .footer {
   padding: 80px 0 24px;
-  background-color: var(--gray-900);
 }
 
 .footer h3 {
@@ -770,7 +783,7 @@ text-align: left;
   justify-content: center;
   width: 40px;
   height: 40px;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.09);
   border-radius: 50%;
   color: var(--white);
   transition: var(--transition);
@@ -794,7 +807,7 @@ text-align: left;
 }
 
 .footer-links a {
-  color: var(--gray-400);
+  color: var(--white);
   transition: var(--transition);
 }
 
@@ -809,7 +822,7 @@ html[dir="rtl"] .footer-links a:hover{
 .footer-contact li {
   display: flex;
   align-items: flex-start;
-  color: var(--gray-400);
+  color: var(--white);
 }
 
 .footer-contact li i {
@@ -825,7 +838,7 @@ html[dir="rtl"] .footer-links a:hover{
 }
 
 .footer-bottom {
-  color: var(--gray-500);
+  color: var(--white);
   font-size: 0.875rem;
 }
 
@@ -839,7 +852,7 @@ html[dir="rtl"] .footer-links a:hover{
 }
 
 .footer-bottom-links a {
-  color: var(--gray-500);
+  color: var(--white);
 }
 
 .footer-bottom-links a:hover {
@@ -857,6 +870,56 @@ footer .gmt-logo{
  html[dir="ltr"]  .end-text{
   text-align: left;
  }
+ 
+  .fixed-contact-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1050;
+}
+.fixed-scroll{
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1050;
+}
+.whatsapp-button,.phone-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #25D366; 
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 22px;
+  transition: background-color 0.3s ease;
+}
+
+
+.whatsapp-button:hover,.phone-button:hover {
+  background-color: #1da851;
+}
+.scroll-top {
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  left: 0%;
+  color: var(--white);
+  font-size: 25px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
 @keyframes floating {
   0% {
     transform: translateY(0px);
@@ -893,12 +956,7 @@ footer .gmt-logo{
 }
 
 
-@media screen and (min-width: 992px) {
- .book {
-  -webkit-perspective: 2700px;
-  perspective: 2700px;
-}
-}
+
 
 #about-audittrip .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
