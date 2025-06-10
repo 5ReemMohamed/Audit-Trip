@@ -17,7 +17,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const nameError = document.getElementById("nameError");
   const emailError = document.getElementById("emailError");
   const messageError = document.getElementById("messageError");
-
+  const searchInput=document.getElementById("searchInput");
+  const searchError = document.getElementById("searchError");
   const successMessage = document.getElementById("formSuccess");
   const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
   const navbarCollapse = document.getElementById('navbarSupportedContent');
@@ -61,11 +62,12 @@ document.addEventListener('DOMContentLoaded', function () {
     name: false,
     email: false,
     phone: false,
-    message: false
+    message: false,
+    search: false, 
   };
 
   function updatePlaceholders(lang) {
-    [nameInput, emailInput, messageInput, phoneInput].forEach(input => {
+    [nameInput, emailInput, messageInput, phoneInput,searchInput].forEach(input => {
       if (input) {
         const placeholder = input.getAttribute(`data-${lang}-placeholder`);
         if (placeholder) input.placeholder = placeholder;
@@ -130,6 +132,9 @@ document.addEventListener('DOMContentLoaded', function () {
     if (validationErrors.message && messageError) {
       messageError.innerHTML = isRTL ? "يجب أن تكون الرسالة 10 أحرف على الأقل." : "Message must be at least 10 characters.";
     }
+    if (validationErrors.search && searchError) {
+    searchError.innerHTML = isRTL ? "يرجى إدخال كلمتين على الأقل للبحث." : "Please enter at least 2 characters to search.";
+  }
   }
 
   // Language switch functionality
@@ -172,6 +177,18 @@ document.addEventListener('DOMContentLoaded', function () {
     const email = emailInput?.value.trim() || '';
     const phone = phoneInput?.value.trim() || '';
     const message = messageInput?.value.trim() || '';
+    const searchValue = searchInput?.value.trim() || '';
+
+    if (searchValue.length < 2) {
+      validationErrors.search = true;
+      if (searchError) {
+        searchError.innerHTML = isRTL ? "يرجى إدخال كلمتين على الأقل للبحث." : "Please enter at least 2 characters to search.";
+      }
+      isValid = false;
+    } else {
+      validationErrors.search = false;
+      if (searchError) searchError.innerHTML = "";
+    }
 
     // Name validation
     if (name.length < 3) {
@@ -258,7 +275,17 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
-
+[searchInput].forEach(input => {
+  if (input) {
+    input.addEventListener("input", validateAll);
+    input.addEventListener("change", validateAll);
+  }
+});
+document.querySelector('form[role="search"]')?.addEventListener("submit", function (e) {
+  if (!validateAll()) {
+    e.preventDefault(); // prevent form submission if invalid
+  }
+});
   // Initialize AOS
   if (typeof AOS !== 'undefined') {
     AOS.init({
