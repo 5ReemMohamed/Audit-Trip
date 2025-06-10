@@ -50,7 +50,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 125px;
+  scroll-padding-top: 105px;
 }
 a {
   color: var(--white);
@@ -397,9 +397,13 @@ html[dir="ltr"] .hero-header p {
     display: flex;
     flex-direction: column;
 }
-
+.services .card p{
+  text-align: justify !important;
+  font-size: .8rem;
+}
 .services .card h3 {
     color: var(--primary) !important;
+    font-size: 1.3rem;
 }
 
 .services .card:hover {
@@ -414,7 +418,7 @@ html[dir="ltr"] .hero-header p {
 }
 
 .content {
-    padding: 15px 20px;
+    padding: 15px 10px;
     flex-grow: 1;
 }
 
@@ -491,7 +495,7 @@ img {
   border-radius: var(--border-radius);
   padding: 1.25rem;
   box-shadow: none;
-  font-size: 12px;
+  font-size: 13px;
 }
 .accordion-button:not(.collapsed) {
     color:var(--white);
@@ -517,22 +521,22 @@ html[dir="rtl"] .accordion-button::after{
 .accordion-body {
   padding: 1.25rem;
   background-color: rgba(255, 255, 255, 0.8);
-  font-size: 12px;
+  font-size: 13px;
 }
-@media screen and (min-width : 400px) {
+@media screen and (min-width : 415px) {
    .accordion-button {
-  font-size: 14px;
+  font-size: 15px;
 }
   .accordion-body {
-  font-size: 14px;
+  font-size: 15px;
 }
 }
 @media screen and (min-width : 668px) {
    .accordion-button {
-  font-size: 14px;
+  font-size: 15px;
 }
   .accordion-body {
-  font-size: 14px;
+  font-size: 15px;
 }
 }
 @media screen and (min-width : 768px) {
@@ -549,6 +553,12 @@ html[dir="rtl"] .accordion-button::after{
 }
   .accordion-body {
   font-size: 16px;
+}
+.services .card p{
+  font-size: 1rem;
+}
+.services .card h3 {
+    font-size: 1.7rem;
 }
 }
 /* Contact Section */
@@ -614,7 +624,12 @@ html[dir="rtl"] .accordion-button::after{
   background-color: transparent;
   font-family: inherit;
 }
-
+html[dir="rtl"] #UserPhone::placeholder{
+text-align: right;
+}
+html[dir="ltr"] #UserPhone::placeholder{
+text-align: left;
+}
 .contact-form .form-field input::placeholder, .contact-form .form-field textarea::placeholder,.side input::placeholder{
   opacity: .7;
   color: var(--white);
