@@ -62,12 +62,11 @@ document.addEventListener('DOMContentLoaded', function () {
     name: false,
     email: false,
     phone: false,
-    message: false,
-    search: false, 
+    message: false, 
   };
 
   function updatePlaceholders(lang) {
-    [nameInput, emailInput, messageInput, phoneInput,searchInput].forEach(input => {
+    [nameInput, emailInput, messageInput, phoneInput].forEach(input => {
       if (input) {
         const placeholder = input.getAttribute(`data-${lang}-placeholder`);
         if (placeholder) input.placeholder = placeholder;
@@ -117,28 +116,24 @@ document.addEventListener('DOMContentLoaded', function () {
   function updateErrorMessages(lang) {
     const isRTL = lang === 'ar';
 
-    if (validationErrors.name && nameError) {
+    if (validationErrors.name) {
       nameError.innerHTML = isRTL ? "الاسم يجب أن يكون على الأقل 3 أحرف." : "Name must be at least 3 characters.";
     }
 
-    if (validationErrors.email && emailError) {
+    if (validationErrors.email) {
       emailError.innerHTML = isRTL ? "يرجى إدخال بريد إلكتروني صالح." : "Please enter a valid email.";
     }
 
-    if (validationErrors.phone && phoneError) {
+    if (validationErrors.phone) {
       phoneError.innerHTML = isRTL ? "يرجى إدخال رقم هاتف صالح." : "Please enter a valid phone number.";
     }
 
-    if (validationErrors.message && messageError) {
+    if (validationErrors.message) {
       messageError.innerHTML = isRTL ? "يجب أن تكون الرسالة 10 أحرف على الأقل." : "Message must be at least 10 characters.";
     }
-    if (validationErrors.search && searchError) {
-    searchError.innerHTML = isRTL ? "يرجى إدخال كلمتين على الأقل للبحث." : "Please enter at least 2 characters to search.";
-  }
   }
 
-  // Language switch functionality
-  if (langSwitchBtn) {
+ 
     langSwitchBtn.addEventListener('click', () => {
       const currentLang = langSwitchBtn.getAttribute('data-lang');
       const newLang = currentLang === 'ar' ? 'en' : 'ar';
@@ -146,9 +141,8 @@ document.addEventListener('DOMContentLoaded', function () {
       translatableElements.forEach(el => {
         const icon = el.querySelector('i');
         const text = el.getAttribute(`data-${newLang}`);
-
+        el.innerHTML = '';
         if (icon) {
-          el.innerHTML = '';
           el.appendChild(icon);
           el.append(' ' + text);
         } else {
@@ -166,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function () {
       updatePlaceholders(newLang);
       updateErrorMessages(newLang);
     });
-  }
+  
 
   function validateAll() {
     let isValid = true;
@@ -177,59 +171,48 @@ document.addEventListener('DOMContentLoaded', function () {
     const email = emailInput?.value.trim() || '';
     const phone = phoneInput?.value.trim() || '';
     const message = messageInput?.value.trim() || '';
-    const searchValue = searchInput?.value.trim() || '';
 
-    if (searchValue.length < 2) {
-      validationErrors.search = true;
-      if (searchError) {
-        searchError.innerHTML = isRTL ? "يرجى إدخال كلمتين على الأقل للبحث." : "Please enter at least 2 characters to search.";
-      }
-      isValid = false;
-    } else {
-      validationErrors.search = false;
-      if (searchError) searchError.innerHTML = "";
-    }
 
     // Name validation
     if (name.length < 3) {
       validationErrors.name = true;
-      if (nameError) nameError.innerHTML = isRTL ? "الاسم يجب أن يكون على الأقل 3 أحرف." : "Name must be at least 3 characters.";
+      nameError.innerHTML = isRTL ? "الاسم يجب أن يكون على الأقل 3 أحرف." : "Name must be at least 3 characters.";
       isValid = false;
     } else {
       validationErrors.name = false;
-      if (nameError) nameError.innerHTML = "";
+      nameError.innerHTML = "";
     }
 
     // Email validation
     const emailRegex = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
     if (!emailRegex.test(email)) {
       validationErrors.email = true;
-      if (emailError) emailError.innerHTML = isRTL ? "يرجى إدخال بريد إلكتروني صالح." : "Please enter a valid email.";
+      emailError.innerHTML = isRTL ? "يرجى إدخال بريد إلكتروني صالح." : "Please enter a valid email.";
       isValid = false;
     } else {
       validationErrors.email = false;
-      if (emailError) emailError.innerHTML = "";
+      emailError.innerHTML = "";
     }
 
     // Phone validation
-    const phoneRegex = /^[0-9]{8,15}$/;
+     const phoneRegex = /^[0-9]{8,15}$/;
     if (!phoneRegex.test(phone)) {
       validationErrors.phone = true;
-      if (phoneError) phoneError.innerHTML = isRTL ? "يرجى إدخال رقم هاتف صالح." : "Please enter a valid phone number.";
+      phoneError.innerHTML = isRTL ? "يرجى إدخال رقم هاتف صالح." : "Please enter a valid phone number.";
       isValid = false;
     } else {
       validationErrors.phone = false;
-      if (phoneError) phoneError.innerHTML = "";
+      phoneError.innerHTML = "";
     }  
 
     // Message validation
     if (message.length < 10) {
       validationErrors.message = true;
-      if (messageError) messageError.innerHTML = isRTL ? "يجب أن تكون الرسالة 10 أحرف على الأقل." : "Message must be at least 10 characters.";
+      messageError.innerHTML = isRTL ? "يجب أن تكون الرسالة 10 أحرف على الأقل." : "Message must be at least 10 characters.";
       isValid = false;
     } else {
       validationErrors.message = false;
-      if (messageError) messageError.innerHTML = "";
+      messageError.innerHTML = "";
     }
 
     return isValid;
@@ -237,10 +220,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Input validation listeners
   [nameInput, emailInput, phoneInput, messageInput].forEach(input => {
+    
     if (input) {
-      input.addEventListener("input", validateAll);
-      input.addEventListener("change", validateAll);
-    }
+    input.addEventListener("input", validateAll);
+    input.addEventListener("change", validateAll);
+  }
+    
   });
 
   // Form submission
@@ -249,16 +234,15 @@ document.addEventListener('DOMContentLoaded', function () {
       e.preventDefault();
       const isRTL = document.documentElement.getAttribute('dir') === 'rtl';
 
-      if (validateAll()) {
-        const formData = {
-          name: nameInput?.value.trim() || '',
-          email: emailInput?.value.trim() || '',
-          phone: phoneInput?.value.trim() || '',
-          message: messageInput?.value.trim() || ''
-        };
+     if (validateAll()) {
+        const name = nameInput?.value.trim() || '';
+        const email = emailInput?.value.trim() || '';
+        const phone = phoneInput?.value.trim() || '';
+        const message = messageInput?.value.trim() || '';
 
-        localStorage.setItem("contactFormData", JSON.stringify(formData));
-
+        const waMessage = `Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`;
+        const whatsappURL = `https://wa.me/201011159119?text=${waMessage}`;
+        window.open(whatsappURL, "_blank");
         if (successMessage) {
           successMessage.innerHTML = isRTL ? "تم إرسال الرسالة بنجاح." : "Message sent successfully.";
           successMessage.classList.remove("d-none");
@@ -267,31 +251,21 @@ document.addEventListener('DOMContentLoaded', function () {
         form.reset();
         validationErrors = { name: false, email: false, phone: false, message: false };
 
-        setTimeout(() => {
-          if (successMessage) successMessage.classList.add("d-none");
-        }, 3000);
-      } else {
-        if (successMessage) successMessage.classList.add("d-none");
-      }
-    });
-  }
-[searchInput].forEach(input => {
-  if (input) {
-    input.addEventListener("input", validateAll);
-    input.addEventListener("change", validateAll);
-  }
-});
-document.querySelector('form[role="search"]')?.addEventListener("submit", function (e) {
-  if (!validateAll()) {
-    e.preventDefault(); // prevent form submission if invalid
-  }
-});
+          setTimeout(() => {
+            if (successMessage) successMessage.classList.add("d-none");
+          }, 3000);
+        }
+        else {
+                if (successMessage) successMessage.classList.add("d-none");
+              }
+            });
+          }
+
   // Initialize AOS
-  if (typeof AOS !== 'undefined') {
-    AOS.init({
-      offset: 120,
-      duration: 1000,
-      easing: 'ease-in-out',
-    });
-  }
+   AOS.init({
+    offset: 120,
+    duration: 1000,
+    easing: 'ease-in-out',
+  });
+  
 });
